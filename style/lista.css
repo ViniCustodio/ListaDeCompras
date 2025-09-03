@@ -1,0 +1,46 @@
+.lista{
+    width: 80%;
+}
+
+.lista-itens{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.itens-adicionados{
+    display: grid;
+    grid-template-columns: 40px 200px 100px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itens-adicionados p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.itens-adicionados button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.qtd-itens{
+    display: flex;
+    gap: .3125rem;
+}
+
+.qtd-itens input{
+    width: 40px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.qtd-itens input[type=number]::-webkit-inner-spin-button,
+.qtd-itens input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
