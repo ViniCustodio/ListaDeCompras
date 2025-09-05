@@ -8,37 +8,45 @@
 </head>
 <body>
 
-    <main class="container">
+    <main class="container-wrapper">
 
-        <div class="container-principal">
-            <h1 class="textoPrincipal"> Lista de compras </h1>
+        <div class="container">
 
-            <div class="containerinput">
+            <div class="container-principal">
+                <h1 class="textoPrincipal"> Lista de compras </h1>
 
-                <h2 class="textoInput"> Itens da lista </h2>
+                <div class="containerinput">
 
-                <div class="adicionarInput">
+                    <h2 class="textoInput"> Itens da lista </h2>
 
-                    <input type="text" id="item" placeholder="Adicione item aqui">
-                    <button id="btnAdicionar"> Salvar item </button>
+                    <div class="adicionarInput">
+
+                        <input type="text" id="item" placeholder="Adicione item aqui">
+                        <button id="btnAdicionar"> Salvar item </button>
+
+                    </div>
+
+                </div>
+
+                <div class="lista">
+
+                    <ul class="lista-itens" id="listaDeCompras">
+
+                        <p class="mensagemVazio"> Não tem itens na lista, por favor, adicionar itens na lista. </p>
+
+                    </ul>
 
                 </div>
 
             </div>
 
-            <div class="lista">
-
-                <ul class="lista-itens" id="listaDeCompras">
-
-                    <p class="mensagemVazio"> Não tem itens na lista, por favor, adicionar itens na lista. </p>
-
-                </ul>
-
-            </div>
-
         </div>
 
+        <div class="container2"> </div>
+        
     </main>
+
+    
 
     <script type="module" src="script/script.js"></script>
     

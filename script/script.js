@@ -7,8 +7,12 @@ let contador = 1;
 btnAdicionar.addEventListener("click", (evento) => {
     evento.preventDefault();
     const adicionandoItem = document.getElementById('item');
-    console.log(adicionandoItem.value);
+    console.log(adicionandoItem)
 
+    if(adicionandoItem.value == ''){
+        return
+    }
+    
     /* Criando tags HTML */
 
     const tagLi = document.createElement("li");
@@ -26,9 +30,7 @@ btnAdicionar.addEventListener("click", (evento) => {
 
     const tagButtonMais = document.createElement("button");
     const tagButtonLixeira = document.createElement("button");
-    tagButtonLixeira.id = `dumb-`+ contador++;
-
-    
+    tagButtonLixeira.id = `dumb-`+ contador++;  
 
     /* Interligando todas as tags criadas */
 
@@ -49,9 +51,14 @@ btnAdicionar.addEventListener("click", (evento) => {
 
     listaUl.appendChild(tagLi);
 
+
     /* Adicionado valores do input nas novas tags criadas */
 
     tagParagrafo.innerText = adicionandoItem.value
+
+    /* Limpando campos após adicionar item */
+
+    adicionandoItem.value = "";
 
     /* Criando icones e adicionando nas listas */
 
@@ -88,6 +95,7 @@ btnAdicionar.addEventListener("click", (evento) => {
     tagButtonLixeira.type = "button";
     tagButtonLixeira.addEventListener("click", () => {
         listaUl.removeChild(tagLi);
+        validacaoItensVazio(listaUl)
     })
 
      /* Adicionando funcionalidade nos botões de menos e mais */
@@ -112,8 +120,6 @@ btnAdicionar.addEventListener("click", (evento) => {
         tagInputNumero.value = qtdItens;
         
      });
-
-
 
     /* Condicional para validação de itens */
 
